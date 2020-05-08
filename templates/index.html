@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}
+    Huhninator
+{% endblock %}
+
+{% block content %}
+<div class="content">
+    <audio id="audio" src="{{ url_for('static', filename='audio/Rooster_Crow-SoundBible.com-1802551702.wav') }}"></audio>
+    <img id="huhn" src="{{ url_for('static', filename='imgs/rooster.png') }}"></img>
+    <h1 id="output"></h1>
+</div>
+{% endblock %}
