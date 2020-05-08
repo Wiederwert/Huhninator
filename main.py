@@ -1,7 +1,13 @@
-from flask import Flask, render_template, jsonify
+from flask import Flask, render_template
 from flask_restful import Api, Resource
 from random import choice
-from cites import CITES
+
+with open('./cites.txt', 'r') as cfile:
+    cites = [
+        {'id': i,
+        'text': t} for i, t
+        in enumerate(cfile.read().split('\n'))
+    ]
 
 app = Flask(__name__)
 
@@ -14,7 +20,7 @@ api = Api(app)
 
 class Cites(Resource):
     def get(self):
-        return choice(CITES)
+        return choice(cites)
 
 api.add_resource(Cites, '/cites')
 
