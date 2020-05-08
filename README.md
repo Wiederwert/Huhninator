@@ -8,6 +8,6 @@ You can add some new Cites in the "cites.txt" file. Cites are splitted by a new 
 ## Run the app
 Run the following commands:
 ```
-pip install requirements.txt
+pip3 install requirements.txt
 python3 main.py
 ```
