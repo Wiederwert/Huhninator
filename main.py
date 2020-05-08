@@ -1,11 +1,8 @@
 from flask import Flask, render_template
 from flask_restful import Api, Resource
 from random import choice
-import os
 
-basedir = os.getcwd()
-
-with open(basedir + '/Huhninator/cites.txt', 'r') as cfile:
+with open('./cites.txt', 'r') as cfile:
     cites = [
         {'id': i,
         'text': t} for i, t
